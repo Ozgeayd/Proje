@@ -1,0 +1,85 @@
+@keyframes fadeInScale {
+  0% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.fade-in-scale {
+  animation: fadeInScale 1s ease-out forwards;
+}
+.menu-link {
+  color: white;
+  font-weight: 500;
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.3s, color 0.3s;
+  padding: 5px;
+}
+
+.menu-link:hover {
+  border-bottom: 2px solid white;
+  color: #ddd;
+}
+body {
+  margin: 0;
+  font-family: 'Playfair Display', serif;
+}
+.fancy-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 5rem;
+  font-weight: 700;
+  opacity: 0.85;
+  color: rgba(255, 255, 255, 0.9);
+  text-shadow: 2px 4px 8px rgba(0, 0, 0, 0.4);
+  animation: fadeInScale 1.5s ease-out forwards;
+  transition: all 0.3s ease;
+}
+
+.fancy-title:hover {
+  opacity: 1;
+  text-shadow: 2px 6px 12px rgba(255, 255, 255, 0.3);
+}
+.social-icons {
+  display: flex;
+  gap: 1.5rem;
+  position: absolute;
+  bottom: 1rem;
+  left: 2rem;
+
+;
+}
+
+.social-icons a {
+  font-size: 1.5rem;
+  transition: transform 0.3s ease;
+  position: relative;
+}
+
+.social-icons a:hover {
+  transform: scale(1.2);
+}
+
+.preview-box {
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 150px;
+  height: 100px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.social-icons a:hover .preview-box {
+  opacity: 1;
+}
